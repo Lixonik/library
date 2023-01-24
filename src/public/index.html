@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../public/styles/index.css">
+    <link rel="icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <title>Library</title>
+</head>
+<body>
+<header class="navbar">
+    <a href="/books">
+        <i class="fa fa-home" aria-hidden="true"></i> Home
+    </a>
+    <div class="navbar__btns">
+        <button class="btn" id="add">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            Add book
+        </button>
+        <div class="dropdown">
+            <button class="dropbtn"> Sort by
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a>Title</a>
+                <a>Author</a>
+                <a>Genre</a>
+                <a>Release</a>
+            </div>
+        </div>
+        <button class="btn" id="available">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            Available
+        </button>
+        <button class="btn" id="rented">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+            Rented
+        </button>
+    </div>
+</header>
+
+<main>
+    <ul id="grid">
+    </ul>
+</main>
+
+<div class="popup" id="add_popup">
+    <img src="../public/images/book_cover_template.jpg" alt="book cover" draggable="false" width="300" height="500">
+    <div class="input-block">
+        <dl class="input-list">
+            <dd>
+                <input class="popup-input" required minlength="1" size="30" placeholder="Title"
+                       autocomplete="off">
+            </dd>
+            <br>
+            <dd>
+                <input class="popup-input" required minlength="1" size="30" placeholder="Author"
+                       autocomplete="off">
+            </dd>
+            <br>
+            <dd>
+                <input class="popup-input" required minlength="1" size="30" placeholder="Genre"
+                       autocomplete="off">
+            </dd>
+            <br>
+            <dt>Release date</dt>
+            <dd>
+                <input class="popup-input" type="date">
+            </dd>
+        </dl>
+        <button class="btn" id="submit" disabled="true">Submit</button>
+    </div>
+</div>
+
+<script src="./public/scripts/index.js"></script>
+<script src="./public/scripts/sort.js"></script>
+<script src="./public/scripts/upload.js"></script>
+
+<script id="book-template" type="text/template">
+    <a href="book.html">
+        <img src="../public/images/book_cover_template.jpg" alt="book cover" draggable="false" width="300" height="500">
+        <div class="book-info">
+            <h2>Book Title</h2>
+            <p>Author:</p>
+            <p>Genre:</p>
+            <p>Release:</p>
+            <p>Status: Available</p>
+        </div>
+    </a>
+</script>
+</body>
+</html>

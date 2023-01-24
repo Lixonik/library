@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Modern Spaces",
+    "author": "Francisco Spencer",
+    "genre": "Technical",
+    "release": "2018-04-18",
+    "status": "available",
+    "renter": "",
+    "pathToImg": "/public/images/book_cover_template.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Roads",
+    "author": "Helene Paquet",
+    "genre": "Fiction",
+    "release": "2018-04-18",
+    "status": "available",
+    "renter": "",
+    "pathToImg": "/public/images/book_cover_template.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Abandoned Kingdom",
+    "author": "Claudia Wilson",
+    "genre": "Drama",
+    "release": "2018-04-18",
+    "status": "available",
+    "renter": "",
+    "pathToImg": "/public/images/book_cover_template.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Two Side",
+    "author": "Pedro Fernandes",
+    "genre": "Drama",
+    "release": "2018-04-18",
+    "status": "available",
+    "renter": "",
+    "pathToImg": "/public/images/book_cover_template.jpg"
+  }
+]

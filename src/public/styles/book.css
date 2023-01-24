@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@1&family=Montserrat:ital,wght@1,700&family=Pacifico&family=Roboto+Mono&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar,
+.btn {
+    overflow: hidden;
+    background-color: rgb(40, 71, 234);
+}
+
+.navbar a,
+.btn {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 0px;
+}
+
+#back {
+    position: absolute;
+    right: 0%;
+    font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.navbar a:hover,
+.btn:hover, #edit:hover, #delete:hover {
+    background-color: red;
+}
+
+
+/* popup */
+
+.popup {
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    width: 45%;
+    z-index: 7;
+    overflow: auto;
+    font-size: 30px;
+    text-align: center;
+    background-color: #FDFFFC;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#delete_popup.look {
+    visibility: visible;
+    opacity: 1;
+}
+
+#delete_popup {
+    width: 100%;
+	max-width: 50px;
+	height: 50px;
+	opacity: 0;
+	visibility: hidden;
+	left: 50%;
+	z-index: 10;
+	padding: 35px 36px;
+	background: rgb(55, 72, 145);
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.85);
+}
+
+#proof_btns {
+    text-align: center;
+}
+
+
+#delete_popup.look {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.input-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-block input {
+    border: 0px solid black;
+    border-bottom: 2px solid gray;
+    outline: 0px;
+    font-size: large;
+    transition: all 0.4s ease-in-out;
+}
+
+.input-block input:focus {
+    border-bottom: 3px solid red;
+}
+
+#submit {
+    min-height: 50px;
+    width: 150px;
+    margin-bottom: 100px;
+}
+
+#submit:disabled {
+    opacity: 0.5;
+}
+
+#submit:enabled:hover {
+    background-color: red;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.book-block,
+.conrtol {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    min-width: 850px;
+    min-height: 500px;
+    height: 70%;
+    width: 50%;
+    overflow: auto;
+    font-size: 30px;
+    text-align: center;
+    background-color: #b0bdd1;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+}
+
+.control {
+    width: 50%;
+    max-width: 400px;
+    align-self: center;
+}
+
+.book-block img {
+    margin: 20px 0px 20px 20px;
+    border-radius: 10px;
+    max-height: 50%;
+    max-width: 50%;
+    display: inline-block;
+}
+
+.book-info input {
+    border: 0px solid black;
+    border-bottom: 1px solid rgb(153, 153, 153);
+    background-color: rgb(40, 71, 234);
+    outline: 0px;
+    font-size: large;
+    transition: all 0.5s ease-in-out;
+    max-width: 225px;
+}
+
+.book-info input:focus {
+    border-bottom: 3px solid red;
+}
+
+.book-block dt {
+    margin-left: 40px;
+    text-align: left;
+    color: rgb(206, 206, 206);
+    font-size: 20px;
+}
+
+.book-block input {
+    color: rgb(206, 206, 206);
+    width: 180px;
+}
+
+.book-block dd {
+    text-align: left;
+    margin-left: 40px;
+    color: rgb(206, 206, 206);
+}
+
+.book-block dd input::placeholder, #edit, #delete {
+    font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
+    color: rgb(206, 206, 206);
+    background-color: rgb(40, 71, 234);
+    font-size: 18px;
+}
+
+#edit, #delete {
+    color: rgb(255, 255, 255);
+}
+
+.book-block {
+    background-color: rgb(40, 71, 234);
+}
+
+.book-info {
+    margin-left: 70px;
+}
+
+/* delete-popup */
+
+#delete_popup {
+    background-color: rgb(40, 71, 234);
+    color: rgb(255, 255, 255);
+    align-self: center;
+    max-width: 400px;
+    max-height: 175px;
+    min-height: 175px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
+
+}
+
+#delete_popup p {
+    text-align: left;
+    padding: 0;
+}
+
+#proof_btns button {
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-right: 1vw;
+    margin-left: 5vw;
+    font-family: 'Roboto Light', monospace, Arial, Helvetica, sans-serif;
+
+}
+
+#proof_btns {
+    max-height: 160px;
+}

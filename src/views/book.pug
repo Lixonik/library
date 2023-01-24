@@ -1,0 +1,50 @@
+doctype html
+head
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css')
+    link(rel='stylesheet' href='../public/styles/book.css')
+    link(rel='icon' type='image/x-icon' href='../public/images/favicon.ico')
+    title=title
+nav.navbar
+    a#home(href='/books')
+        i.fa.fa-home(aria-hidden='true')
+        |  Home
+    button#back.btn
+        i.fa.fa-chevron-circle-left(aria-hidden='true')
+        |  Back
+main
+    .book-block
+        img(src=pathToImg)
+        .book-info
+            dl.input-list
+                dt Title:
+                dd
+                    input(placeholder='Title...' value=title required='' disabled='' minlength='1' size='30' autocomplete='off')
+                br
+                dt Author:
+                dd
+                    input(placeholder='Author...' value=author required='' disabled='' minlength='1' size='30' autocomplete='off')
+                br
+                dt Genre:
+                dd
+                    input(placeholder='Genre...' value=genre required='' disabled='' minlength='1' size='30' autocomplete='off')
+                br
+                dt Renter:
+                dd
+                    input#renter(placeholder='Renter name...' value=renter required='' disabled='' minlength='1' size='30' autocomplete='off')
+                br
+                dt Release date:
+                dd
+                    input(type='date' value=release disabled='')
+                br
+                dt#status=status
+button#edit.btn.control Edit
+button#delete.btn.control Delete
+#delete_popup.popup
+    p Are you sure?
+
+    #proof_btns
+        button#confirm.btn Delete
+        button#cancel.btn Cancel
+
+script(src='../public/scripts/book.js')
